@@ -1,13 +1,25 @@
 # programa en python para 
 
-# input 
-dl=int(input("digite dl= "))
+print("-------------------------------------")
+print("---------Digitos iguales-------------")
+print("-------------------------------------")
 
-# procesing
-if dl<=3:
-    cl=300
+# input
+n = int(input("Digite un numero: "))
+ 
+# processing
+if -10 <= n <= 10:
+    rta = "El numero no tiene mas de dos digitos"
 else:
-    cl=300+50*(dl-3)
+    d = abs(n) % 100
+    l = d % 10
+    p = d // 10
+    if l == p:
+        rta = "Los ultimos dos digitos son iguales"
+    else:
+        rta = "Los ultimos dos digitos son diferentes"
 
 # output
-print("el costo de la llamda es " + str(cl))
+print("-------------------------------------")
+print(str(rta))
+print("-------------------------------------")
